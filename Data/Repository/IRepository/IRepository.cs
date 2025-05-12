@@ -9,18 +9,18 @@ namespace Data.Repository.IRepository
 {
     public interface IRepository<T> where T : class
     {
-        T Task<GetAsync>(int id);
-        IEnumerable<T> Task<GetAll>(
+       Task<T> GetAsync(int id);
+        Task<IEnumerable<T>> GetAll(
             Expression<Func<T, bool>> filter = null,
             Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null
             );
 
-        T Task<FirstOrDefaultAsyn>(
+        Task<T>FirstOrDefaultAsyn(
             Expression<Func<T, bool>> filter = null
             );
 
-        List<T> Task<ToListAsync>();
-        void Task<AddAsync>(T entity);
+        Task<List<T>> ToListAsync();
+        void AddAsync(T entity);
         void Remove(int id);
     }
 }

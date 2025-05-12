@@ -7,8 +7,8 @@ using Model;
 
 namespace Data.Repository.IRepository
 {
-    public interface IPromotion : IRepository<Promotion>
+    public interface IClientRepository : IRepository<ClientRepository>
     {
-        void Update();
+        void Update(Client client);
     }
 }

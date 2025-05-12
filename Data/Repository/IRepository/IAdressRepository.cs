@@ -7,8 +7,8 @@ using Model;
 
 namespace Data.Repository.IRepository
 {
-    public interface IServiceCategory : IRepository<ServiceCategory>
+    public interface IAdressRepository : IRepository<AdressRepository>
     {
-        void Update();
+        void Update(Adress adress);
     }
 }

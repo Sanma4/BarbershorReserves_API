@@ -7,7 +7,7 @@ using Model;
 
 namespace Data.Repository.IRepository
 {
-    public interface IEmployeeCategory : IRepository<EmployeeCategory>
+    public interface IReviewRepository : IRepository<Review>
     {
         void Update();
     }

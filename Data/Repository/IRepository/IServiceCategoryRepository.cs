@@ -7,8 +7,8 @@ using Model;
 
 namespace Data.Repository.IRepository
 {
-    public interface IBooking : IRepository<Booking>
+    public interface IServiceCategoryRepository : IRepository<ServiceCategory>
     {
-        void Update();
+        void Update(ServiceCategory serviceCategory);
     }
 }
