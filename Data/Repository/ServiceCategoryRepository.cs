@@ -12,7 +12,7 @@ namespace Data.Repository
     public class ServiceCategoryRepository : Repository<ServiceCategory>, IServiceCategoryRepository
     {
         private readonly ApplicationDbContext _context;
-        public ServiceCategoryRepository(ApplicationDbContext context)
+        public ServiceCategoryRepository(ApplicationDbContext context) : base(context)
         {
             _context = context;
         }

@@ -11,14 +11,14 @@ namespace Data.Repository
 {
     public class AdressRepository : Repository<AdressRepository>, IAdressRepository
     {
-        private readonly ApplicationDbContext _db;
-        public AdressRepository(ApplicationDbContext db)
+        private readonly ApplicationDbContext _context;
+        public AdressRepository(ApplicationDbContext context) : base(context) 
         {
-            _db = db;
+            _context = context;
         }
         public async void Update(Adress adress)
         {
-            var objFromDb = await _db.Adresses.FirstOrDefaultAsync(a => a.Id == adress.Id);
+            var objFromDb = await _context.Adresses.FirstOrDefaultAsync(a => a.Id == adress.Id);
             objFromDb.Street = adress.Street;
             objFromDb.Number = adress.Number;
             objFromDb.Location = adress.Location;

@@ -13,7 +13,7 @@ namespace Data.Repository
     {
         private readonly ApplicationDbContext _context;
 
-        public BookingDetailsRepository(ApplicationDbContext context)
+        public BookingDetailsRepository(ApplicationDbContext context) :base(context) 
         {
             _context = context;
         }
