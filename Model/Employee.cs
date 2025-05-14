@@ -12,8 +12,10 @@ namespace Model
         public string FullName { get; set; }
         public string Bio { get; set; }
         public string ProfileImg { get; set; }
+        public string Status { get; set; } //Ocupado, Disponible, Suspendido
+        public string Availability { get; set; } //Dia disponible. Lunes, martes, etc.
         public int EmployeeCategoryId { get; set; }
-        public bool Active { get; set; }
         public Adress Adress { get; set; }
+        public bool Active { get; set; }
     }
 }

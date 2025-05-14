@@ -10,6 +10,7 @@ namespace Model
     {
         public int Id { get; set; }
         public DateTime BookingDate { get; set; }
+        public string Status { get; set; }
         public BookingDetails BookingDetails { get; set; }
         public int ClientId { get; set; }
     }
