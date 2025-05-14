@@ -12,5 +12,6 @@ namespace Model
         public int Rating { get; set; }
         public string Comment { get; set; }
         public int ClientId { get; set; }
+        public Client Client { get; set; }
     }
 }

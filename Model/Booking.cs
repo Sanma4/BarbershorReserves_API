@@ -13,5 +13,6 @@ namespace Model
         public string Status { get; set; }
         public BookingDetails BookingDetails { get; set; }
         public int ClientId { get; set; }
+        public Client Client { get; set; }
     }
 }

@@ -14,5 +14,6 @@ namespace Model
         public int PhoneNumber  { get; set; }
         public Adress Adress { get; set; }
         public bool IsValued { get; set; }
+        public Booking Booking { get; set; }
     }
 }

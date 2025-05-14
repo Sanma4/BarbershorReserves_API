@@ -15,6 +15,7 @@ namespace Model
         public string Status { get; set; } //Ocupado, Disponible, Suspendido
         public string Availability { get; set; } //Dia disponible. Lunes, martes, etc.
         public int EmployeeCategoryId { get; set; }
+        public EmployeeCategory EmployeeCategory { get; set; }
         public Adress Adress { get; set; }
         public bool Active { get; set; }
     }

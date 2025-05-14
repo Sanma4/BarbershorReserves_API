@@ -15,5 +15,6 @@ namespace Model
         public double Price { get; set; }
         public string Status { get; set; }
         public int ServiceCategoryId { get; set; }
+        public ServiceCategory ServiceCategory { get; set; }
     }
 }
