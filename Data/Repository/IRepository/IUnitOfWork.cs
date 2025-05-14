@@ -20,7 +20,7 @@ namespace Data.Repository.IRepository
         IServiceRepository Service { get; }
         IServiceCategoryRepository ServiceCategory { get; }
 
-        void SaveChangesAsync();
+        Task SaveChangesAsync();
 
     }
 }

@@ -28,5 +28,13 @@ namespace Data
         public DbSet<Schedule> Schedules { get; set; }
         public DbSet<Service> Services { get; set; }
         public DbSet<ServiceCategory> ServiceCategories { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+
+            builder.Entity<BookingDetails>()
+                .HasKey(bd => new { bd.ServiceId, bd.BookingId });
+        }
     }
 }

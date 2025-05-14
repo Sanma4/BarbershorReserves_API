@@ -3,7 +3,6 @@ using Microsoft.Extensions.Options;
 using Microsoft.EntityFrameworkCore;
 using Data;
 
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.

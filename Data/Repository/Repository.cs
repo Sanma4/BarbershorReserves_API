@@ -14,7 +14,11 @@ namespace Data.Repository
         protected readonly DbContext _context;
         internal DbSet<T> _dbSet;
 
-
+        public Repository(DbContext context)
+        {
+            _context = context;
+            _dbSet = context.Set<T>();
+        }
         public async Task<T> GetAsync(int id)
         {
            return await _dbSet.FindAsync(id);
@@ -52,7 +56,7 @@ namespace Data.Repository
             return await query.ToListAsync(); 
         }
 
-        public async void AddAsync(T entity)
+        public async Task AddAsync(T entity)
         {
            await _dbSet.AddAsync(entity);
         }
@@ -61,5 +65,9 @@ namespace Data.Repository
             T entityToRemove = _dbSet.Find(id);
         }
 
+        public void Remove(T entity)
+        {
+            _dbSet.Remove(entity);
+        }
     }
 }

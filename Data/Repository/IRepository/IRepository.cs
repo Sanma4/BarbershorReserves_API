@@ -20,7 +20,8 @@ namespace Data.Repository.IRepository
             );
 
         Task<List<T>> ToListAsync();
-        void AddAsync(T entity);
+        Task AddAsync(T entity);
         void Remove(int id);
+        void Remove(T entity);
     }
 }

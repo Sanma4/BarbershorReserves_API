@@ -49,7 +49,7 @@ namespace Data.Repository
             throw new NotImplementedException();
         }
 
-        public async void SaveChangesAsync()
+        public async Task SaveChangesAsync()
         {
            await _context.SaveChangesAsync();
         }

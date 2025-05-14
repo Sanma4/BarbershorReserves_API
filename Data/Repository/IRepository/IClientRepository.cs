@@ -7,7 +7,7 @@ using Model;
 
 namespace Data.Repository.IRepository
 {
-    public interface IClientRepository : IRepository<ClientRepository>
+    public interface IClientRepository : IRepository<Client>
     {
         void Update(Client client);
     }

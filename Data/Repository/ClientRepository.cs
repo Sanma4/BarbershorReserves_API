@@ -9,10 +9,10 @@ using Model;
 
 namespace Data.Repository
 {
-    public class ClientRepository : Repository<ClientRepository>, IClientRepository
+    public class ClientRepository : Repository<Client>, IClientRepository
     {
         private readonly ApplicationDbContext _context;
-        public ClientRepository(ApplicationDbContext context)
+        public ClientRepository(ApplicationDbContext context) : base(context)
         {
             _context = context;
         }
